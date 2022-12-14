@@ -1,0 +1,43 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+
+.footer-wrapper {
+  padding-top: 8rem;
+  padding-bottom: 2rem;
+  background-color: $secondary;
+
+  .footer {
+    @include max-width(large);
+    display: flex;
+    flex-direction: column;
+
+    .content {
+      margin-bottom: 6rem;
+      max-width: 25rem;
+
+      p {
+        margin: 1rem 0;
+      }
+
+      .social {
+        display: flex;
+        gap: 1rem;
+
+        a {
+          text-decoration: none;
+        }
+
+        svg {
+          width: 2rem;
+          height: 2rem;
+          color: $primary;
+        }
+      }
+    }
+
+    .copy {
+      align-self: center;
+      font-size: 1.4rem;
+    }
+  }
+}

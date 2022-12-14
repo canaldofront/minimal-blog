@@ -1,0 +1,54 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+
+.post {
+  @include max-width(small);
+  margin-bottom: $marginBottom;
+  display: flex;
+  flex-direction: column;
+
+  .heading {
+    max-width: 60rem;
+    align-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  .content {
+    .image {
+      margin-bottom: 4rem;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    :is(h1, h2, h3, h4, h5, h6) {
+      margin: 2rem 0 1rem 0;
+    }
+
+    ul {
+      margin: 2rem 0 2rem 4rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      text-align: center;
+      margin: 2rem auto;
+    }
+  }
+}

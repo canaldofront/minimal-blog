@@ -1,0 +1,13 @@
+@import 'styles/variables.scss';
+
+.bar {
+  background-color: $primary;
+  padding: 1.5rem 0;
+  text-align: center;
+  margin-bottom: 3rem;
+
+  span {
+    font-size: 1.4rem;
+    color: $white;
+  }
+}

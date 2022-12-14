@@ -1,0 +1,50 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+
+.post {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  &:not(:last-of-type) {
+    margin-bottom: 4rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .image {
+    img {
+      max-width: 20rem;
+      height: 20rem;
+    }
+  }
+
+  .content {
+    h2 {
+      font-family: $titleFontFamily;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: $black;
+
+      &:hover {
+        font-weight: 600;
+      }
+    }
+  }
+}

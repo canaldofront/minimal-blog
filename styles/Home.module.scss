@@ -1,0 +1,40 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+
+.page {
+  @include max-width(small);
+  margin-bottom: $marginBottom;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    max-width: 35rem;
+    margin-bottom: 6rem;
+    text-align: center;
+  }
+
+  .pagination {
+    margin-top: 6rem;
+
+    button {
+      background-color: $primary;
+      color: $white;
+      padding: 1rem;
+      border: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:disabled {
+        background-color: $gray;
+        cursor: default;
+      }
+    }
+
+    span {
+      margin: 0 1rem;
+    }
+  }
+}

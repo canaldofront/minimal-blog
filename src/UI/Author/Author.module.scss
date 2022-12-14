@@ -1,0 +1,29 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  .image {
+    @include flex-center;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .content {
+    span {
+      display: block;
+    }
+
+    .name {
+      font-size: 1.5rem;
+    }
+
+    .date {
+      font-size: 1.2rem;
+      color: $gray;
+    }
+  }
+}
