@@ -3,7 +3,7 @@ import Image from 'next/image';
 import client from 'src/sanity';
 import { useNextSanityImage } from 'next-sanity-image';
 
-const Author = ({ date, author }) => {
+const Author = ({ date = new Date(), author }) => {
   const { name, image } = author || {};
 
   const newDate = new Date(date);
