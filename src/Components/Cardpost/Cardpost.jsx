@@ -13,10 +13,10 @@ const Cardpost = ({ post, author }) => {
     publishedAt,
     short_text,
     slug,
-  } = post;
+  } = post || {};
 
   const imageProps = useNextSanityImage(client, mainImage);
-  const getAuthor = author.find((author) => author._id === authorRef._ref);
+  const getAuthor = author?.find((author) => author._id === authorRef._ref);
 
   return (
     <div className={styles.post}>

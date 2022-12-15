@@ -4,7 +4,7 @@ import client from 'src/sanity';
 import { useNextSanityImage } from 'next-sanity-image';
 
 const Author = ({ date, author }) => {
-  const { name, image } = author;
+  const { name, image } = author || {};
 
   const newDate = new Date(date);
   const formattedDate = new Intl.DateTimeFormat('pt-BR', {

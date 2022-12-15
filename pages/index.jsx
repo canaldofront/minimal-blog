@@ -10,7 +10,7 @@ export default function Home({ posts, author }) {
   // Filter Posts
   const searchFor = router.query.search || null;
   const foundPosts =
-    posts.filter((post) => post.title.toLowerCase().includes(searchFor)) || [];
+    posts?.filter((post) => post.title.toLowerCase().includes(searchFor)) || [];
 
   // Pagination
   const numberOfPosts = searchFor === null ? posts.length : foundPosts.length;
