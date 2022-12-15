@@ -17,7 +17,7 @@ const Author = ({ date = new Date(), author }) => {
   return (
     <div className={styles.author}>
       <div className={styles.image}>
-        <Image src={imageProps.src} alt='autor' width={35} height={35} />
+        <Image src={imageProps?.src} alt='autor' width={35} height={35} />
       </div>
       <div className={styles.content}>
         <span className={styles.name}>{name}</span>
