@@ -8,6 +8,11 @@
   align-items: center;
   margin-bottom: $marginBottom;
 
+  @include device(tablet) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
   .search {
     width: 100%;
     max-width: 50rem;
