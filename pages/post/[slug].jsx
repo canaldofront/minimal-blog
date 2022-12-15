@@ -13,7 +13,7 @@ const Post = ({ post, author }) => {
     body,
     author: authorRef,
     publishedAt,
-  } = post;
+  } = post || {};
 
   const getAuthor = author.find((author) => author._id === authorRef._ref);
   const imageProps = useNextSanityImage(client, mainImage);
